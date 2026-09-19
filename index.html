@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Sportswear Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <div class="store-container">
+    <!-- Шапка магазина -->
+    <header class="navbar">
+      <div class="logo"><i class="fa-solid fa-bolt"></i> CYBER<span>GEAR</span></div>
+      <button class="cart-btn" id="cartBtn">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Корзина</span>
+        <div class="cart-badge" id="cartBadge">0</div>
+      </button>
+    </header>
+
+    <!-- Фильтры по категориям -->
+    <div class="categories">
+      <button class="cat-btn active" data-cat="all">Все товары</button>
+      <button class="cat-btn" data-cat="boots">Бутсы</button>
+      <button class="cat-btn" data-cat="kits">Форма</button>
+      <button class="cat-btn" data-cat="balls">Мячи</button>
+    </div>
+
+    <!-- Витрина товаров -->
+    <main class="products-grid" id="productsGrid"></main>
+  </div>
+
+  <!-- Панель корзины (сбоку) -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+      <h3>Ваша корзина</h3>
+      <button class="close-cart" id="closeCart">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="total-price">Итого: <span id="cartTotal">0 ₸</span></div>
+      <button class="checkout-btn" onclick="alert('Заказ успешно оформлен!')">Оформить заказ</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
